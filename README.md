@@ -84,7 +84,7 @@ Key findings from [`project.ipynb`]:
 Four model families were trained and tuned on a 60% Train / 20% Validation / 20% Test stratified split:
 
 | Model | Hyperparameters | Val ROC-AUC | Val F1 |
-| :--- | :--- | :---: | :---: | :---: |
+| :--- | :--- | :---: | :---: |
 | **XGBoost** | `eta=0.1, max_depth=3, min_child_weight=3` | **0.9332** | **0.7856** |
 | **Logistic Regression** | `solver='liblinear', C=1.0` | 0.9238 | 0.7933 |
 | **Random Forest** | `n_estimators=200, max_depth=8, min_samples_leaf=5` | 0.9217 | 0.7743 |
