@@ -206,7 +206,7 @@ curl -X POST "http://localhost:8000/predict" \
 
 Response:
 ```json
-{"dropout_probability":0.8661,
+{"dropout_probability":0.9204,
 "dropout_prediction":true,
 "risk_level":"High Risk"}
 ```
