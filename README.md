@@ -85,15 +85,16 @@ Four model families were trained and tuned on a 60% Train / 20% Validation / 20%
 
 | Model | Hyperparameters | Val ROC-AUC | Val F1 |
 | :--- | :--- | :---: | :---: |
-| **XGBoost** | `eta=0.1, max_depth=3, min_child_weight=3` | **0.9332** | **0.7856** |
-| **Logistic Regression** | `solver='liblinear', C=1.0` | 0.9238 | 0.7933 |
-| **Random Forest** | `n_estimators=200, max_depth=8, min_samples_leaf=5` | 0.9217 | 0.7743 |
-| **Decision Tree** | `max_depth=4, min_samples_leaf=20` | 0.9013 | 0.7490 |
+| **XGBoost** | `eta=0.1, max_depth=3, min_child_weight=3` | **0.9316** | **0.7725** |
+| **Logistic Regression** | `solver='liblinear', C=0.5` | 0.9240 | 0.7544 |
+| **Random Forest** | `n_estimators=100, max_depth=8, min_samples_leaf=10` | 0.9215 | 0.7908 |
+| **Decision Tree** | `max_depth=6, min_samples_leaf=20` | 0.8990 | 0.7577 |
 
 ### Final Evaluation on Held-Out Test Set (20% of data):
-- **Test ROC-AUC:** **0.9335**
-- **Test F1-Score:** **0.8053**
+- **Test ROC-AUC:** **0.9271**
+- **Test F1-Score:** **0.7977**
 
+#### In train.py I retrained the final XGBoost model on the entire dataset without dropping useless columns and xgboost was able to achieve a slightly better ROC-AUC of 0.9335 and F1-Score of 0.8053 on the validation set picking up on some patterns which were not visible at first glance.
 ---
 
 ## Project Structure
