@@ -237,6 +237,13 @@ The service will now listen on `http://localhost:8000`. Test it with `python tes
 The containerized service can be deployed to any major cloud provider:
 
 ### Render / Fly.io
+#### Render
 1. Push the repository to GitHub.
-2. Link the repository to [Render](https://render.com) or [Fly.io](https://fly.io).
+2. Link the repository to [Render](https://render.com).
 3. Select **Docker** environment. Render will automatically detect the `Dockerfile`, build the image, and assign a public URL (e.g. `https://student-dropout-api.onrender.com`) there is no code required.
+
+#### Fly.io
+1. Install Fly CLI: `brew install flyctl` (macOS) or follow instructions for other OS.
+2. Authenticate: `flyctl auth login`
+3. Initialize Fly app: `flyctl launch`.
+4. Deploy: `flyctl deploy`
